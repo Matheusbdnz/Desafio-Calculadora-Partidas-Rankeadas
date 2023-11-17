@@ -13,7 +13,7 @@
 
 //"O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
 
-rankedBalance = balanceWins (22, 8)
+rankedBalance = balanceWins (587, 246)
 
 
 
@@ -22,12 +22,34 @@ function balanceWins (wins, defeats){
     return saldo   
 }
 
-if (rankedBalance <10 ){
-    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível ferro")
-
+if (rankedBalance >=0 && rankedBalance <=10 ){
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Ferro")
 }
 
 else if (rankedBalance>=11 && rankedBalance <=20){
-    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível bronze")
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Bronze")
+}
 
+else if (rankedBalance >=21 && rankedBalance <=50){
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Prata")
+}
+
+else if (rankedBalance >=51 && rankedBalance <=80){
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Ouro")
+}
+
+else if (rankedBalance >=81 && rankedBalance <=90){
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Diamante")
+}
+
+else if (rankedBalance >=91 && rankedBalance <=100){
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Lendário")
+}
+
+else if (rankedBalance >=101){
+    console.log("O heróis tem saldo de " + rankedBalance + " vitórias e está no nível Imortal")
+}
+
+else {
+	console.log("O jogador não possui vitórias o suficiente para estar no ranking")
 }
